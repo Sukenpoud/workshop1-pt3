@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="danger">
+  <ion-item color="danger">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="loginData.email" placeholder="Entrez votre email" required></ion-input>
+  </ion-item>
+
+  <ion-item color="danger">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [(ngModel)]="loginData.password" type="password" placeholder="Entrez votre mot de passe" required></ion-input>
+  </ion-item>
+
+  <div class="ion-padding">
+    <ion-button (click)="login()" expand="block" color="primary">Connexion</ion-button>
+  
+    <p style="text-align: center;">ou</p>
+  
+    <ion-button (click)="signUp()" expand="block" color="tertiary">Inscription</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "workshoppt3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
