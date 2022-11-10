@@ -27,6 +27,27 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-    Tap the button in the toolbar to open the menu.
+
+    <div id="quiz"></div>
+    <span *ngFor="let question of myQuestions | keyvalue">
+      <span *ngFor="let data of question.value">
+        <div class="question"> {{ data.question }} </div>
+        <div class="answers">
+          <label>
+            <span *ngFor="let answer of data.answers | keyvalue">
+              <label>
+                <input type="radio" name="question{{question.key}}" value="{{answer.key}}">
+                {{answer.key}} - {{answer.value}}
+              </label>
+            </span>
+          </label>
+        </div>
+        
+      </span>
+      
+    </span>
+    <button id="submit" (click)="showResults()">Voir résultats</button>
+    <div id="results">Bonnes réponses : {{numCorrect}}</div>
+
   </ion-content>
 </div>
